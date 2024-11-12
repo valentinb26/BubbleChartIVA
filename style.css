@@ -4,12 +4,6 @@ body {
   background-color: #f4f4f4;
 }
 
-#chart {
-  margin: 0 auto;
-  width: 900px;
-  height: 600px;
-}
-
 .tooltip {
   position: absolute;
   background-color: white;

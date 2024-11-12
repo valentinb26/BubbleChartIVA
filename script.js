@@ -105,7 +105,16 @@ function createBubbleChart(data) {
         .attr("fill", d => d3.schemeCategory10[Math.floor(Math.random() * 10)]) // Zufällige Farbe
         .attr("opacity", 0.7)
         .attr("stroke", "#333")
-        .attr("stroke-width", 1);
+        .attr("stroke-width", 1)
+        //neue on-click Funktion
+        .on("click", function(event) {
+            d3.select(this)
+            .attr("stroke", "red")
+            .attr("stroke-width", 3)
+            .attr("fill", "orange");
+        
+            event.stopPropagation(); 
+        });
 
     // Tooltip hinzufügen
     const tooltip = d3.select("body").append("div")
